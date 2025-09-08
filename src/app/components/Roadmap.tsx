@@ -25,7 +25,7 @@ export default function Roadmap() {
             <ul className="space-y-2 text-sm">
               <Bullet>Norte, Lisboa, Comporta, Algarve</Bullet>
               <Bullet>Parcerias com hotéis 5★</Bullet>
-              <Bullet>Protocolos com aeroportos</Bullet>
+              <Bullet>Integração com serviços de transfer exclusivos</Bullet>
             </ul>
           </CardContent>
         </Card>

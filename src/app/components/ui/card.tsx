@@ -6,7 +6,7 @@ export function Card({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className={cn("bg-white dark:bg-neutral-900", className)} {...props} />
+    <div className={cn("bg-neutral-900", className)} {...props} />
   );
 }
 
@@ -17,7 +17,7 @@ export function CardHeader({
   return (
     <div
       className={cn(
-        "p-4 border-b border-neutral-200 dark:border-neutral-800",
+        "p-4 border-b border-neutral-800",
         className
       )}
       {...props}
@@ -41,7 +41,7 @@ export function CardDescription({
   return (
     <p
       className={cn(
-        "text-sm text-neutral-600 dark:text-neutral-400",
+        "text-sm text-neutral-400",
         className
       )}
       {...props}
@@ -63,7 +63,7 @@ export function CardFooter({
   return (
     <div
       className={cn(
-        "p-4 border-t border-neutral-200 dark:border-neutral-800 flex items-center justify-end gap-2",
+        "p-4 border-t border-neutral-800 flex items-center justify-end gap-2",
         className
       )}
       {...props}

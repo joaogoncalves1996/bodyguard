@@ -147,7 +147,7 @@ export default function Contact() {
             <Button
               onClick={handleSend}
               disabled={loading}
-              className="bg-gradient-to-br from-[#C5A572] to-[#B79248] text-[#0B0E11] hover:opacity-95 disabled:opacity-60"
+              className="bg-gradient-to-br from-[#C5A572] to-[#B79248] text-[#0B0E11] hover:opacity-95 disabled:opacity-60 text-nowrap"
             >
               {loading ? "A enviar..." : "Enviar Pedido"}
             </Button>

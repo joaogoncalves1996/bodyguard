@@ -1,22 +1,15 @@
 import Image from "next/image";
 import { Languages, Sun, Moon } from "lucide-react";
 import { Badge } from "@/app/components/ui/badge";
-import { Switch } from "@/app/components/ui/switch";
 import { Button } from "@/app/components/ui/button";
-import { Dispatch, SetStateAction } from "react";
 import { useRouter } from "next/navigation";
 
-interface HeaderProps {
-  dark: boolean;
-  onChangeDark: Dispatch<SetStateAction<boolean>>;
-}
-
-export default function Header({ dark, onChangeDark }: HeaderProps) {
+export default function Header() {
   const router = useRouter();
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-[#0B0E11]/60 border-b border-[#C5A572]/10">
-      <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
         <div className="flex items-center gap-3">
           <div
             className="flex items-center gap-3 cursor-pointer"
@@ -60,13 +53,8 @@ export default function Header({ dark, onChangeDark }: HeaderProps) {
               </a>
             ))}
           </nav>
-          {/*           <div className="flex items-center gap-2">
-            <Sun className="h-4 w-4 text-[#CFCABB]" />
-            <Switch checked={dark} onCheckedChange={onChangeDark} />
-            <Moon className="h-4 w-4 text-[#CFCABB]" />
-          </div> */}
           <Button
-            className="hidden sm:inline-flex bg-gradient-to-br from-[#C5A572] to-[#B79248] text-[#0B0E11] hover:opacity-95 shadow-[0_8px_24px_rgba(197,165,114,0.25)]"
+            className="hidden sm:inline-flex bg-gradient-to-br from-[#C5A572] to-[#B79248] text-[#0B0E11] hover:opacity-95 shadow-[0_8px_24px_rgba(197,165,114,0.25)] text-nowrap"
             onClick={() => router.push("/#contacto")}
           >
             Pedir Avaliação

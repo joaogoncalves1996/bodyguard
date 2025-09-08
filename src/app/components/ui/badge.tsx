@@ -13,8 +13,8 @@ export function Badge({
   const variants = {
     default: "bg-indigo-600 text-white",
     secondary:
-      "bg-neutral-200 dark:bg-neutral-700 text-neutral-900 dark:text-white",
-    outline: "border border-neutral-400 text-neutral-800 dark:text-neutral-200",
+      "bg-neutral-700 text-white",
+    outline: "border border-neutral-400 text-neutral-200",
   };
 
   return (

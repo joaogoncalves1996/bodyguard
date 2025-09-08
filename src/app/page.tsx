@@ -10,10 +10,8 @@ import Investments from "./components/Investments";
 import Hero from "./components/Hero";
 
 export default function Home() {
-  const [dark, setDark] = useState(true);
-
   return (
-    <div className={dark ? "dark" : ""}>
+    <div>
       <div
         className="min-h-screen bg-[#0B0E11] text-[#EAE7DE]"
         style={{
@@ -29,7 +27,7 @@ export default function Home() {
               'url(\'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.35"/></svg>\')',
           }}
         />
-        <Header dark={dark} onChangeDark={setDark} />
+        <Header />
         <Hero />
         <Services />
         <Investments />

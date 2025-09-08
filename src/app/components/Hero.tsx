@@ -36,7 +36,7 @@ const Feature = ({
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.4 }}
     viewport={{ once: true }}
-    className="group rounded-2xl p-6 bg-[rgba(255,255,255,0.04)] dark:bg-[rgba(255,255,255,0.04)] shadow-[0_1px_0_rgba(255,255,255,0.06)_inset,0_1px_8px_rgba(0,0,0,0.35)] ring-1 ring-[#C5A572]/20 backdrop-blur-md border border-white/5"
+    className="group rounded-2xl p-6 bg-[rgba(255,255,255,0.04)] shadow-[0_1px_0_rgba(255,255,255,0.06)_inset,0_1px_8px_rgba(0,0,0,0.35)] ring-1 ring-[#C5A572]/20 backdrop-blur-md border border-white/5"
   >
     <div className="flex items-center gap-3 mb-3">
       <div className="p-2 rounded-xl bg-gradient-to-br from-[#C5A572] to-[#B79248] text-[#0B0E11]">
