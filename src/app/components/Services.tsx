@@ -36,11 +36,6 @@ export default function Services() {
               <Bullet>Gestão de imprensa e curiosos</Bullet>
             </ul>
           </CardContent>
-          <CardFooter>
-            <Button className="bg-[#0B0E11] border border-[#C5A572]/30 text-[#EAE7DE] hover:bg-[#14181D]">
-              Saber mais
-            </Button>
-          </CardFooter>
         </Card>
 
         <Card className="rounded-2xl bg-[#0F1216] border border-[#C5A572]/15">
@@ -59,11 +54,6 @@ export default function Services() {
               <Bullet>Monitorização em tempo real</Bullet>
             </ul>
           </CardContent>
-          <CardFooter>
-            <Button className="bg-[#0B0E11] border border-[#C5A572]/30 text-[#EAE7DE] hover:bg-[#14181D]">
-              Saber mais
-            </Button>
-          </CardFooter>
         </Card>
 
         <Card className="rounded-2xl bg-[#0F1216] border border-[#C5A572]/15">
@@ -83,11 +73,6 @@ export default function Services() {
               <Bullet>Gestão de eventos privados</Bullet>
             </ul>
           </CardContent>
-          <CardFooter>
-            <Button className="bg-[#0B0E11] border border-[#C5A572]/30 text-[#EAE7DE] hover:bg-[#14181D]">
-              Saber mais
-            </Button>
-          </CardFooter>
         </Card>
       </div>
     </section>
