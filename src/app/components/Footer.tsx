@@ -17,10 +17,10 @@ export default function Footer() {
           <a className="hover:text-[#EAE7DE] transition" href="">
             Sobre nós
           </a>
-          <a className="hover:text-[#EAE7DE] transition" href="#servicos">
+          <a className="hover:text-[#EAE7DE] transition" href="/servicos">
             Serviços
           </a>
-          <a className="hover:text-[#EAE7DE] transition" href="#investimento">
+          <a className="hover:text-[#EAE7DE] transition" href="/investimento">
             Parcerias
           </a>
           <a className="hover:text-[#EAE7DE] transition" href="#contacto">

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Languages, Sun, Moon } from "lucide-react";
 import { Badge } from "@/app/components/ui/badge";
@@ -39,10 +41,10 @@ export default function Header() {
         <div className="flex items-center gap-4">
           <nav className="hidden md:flex items-center gap-8 text-sm">
             {[
-              ["#servicos", "Serviços"],
-              ["#investimento", "Investimento"],
-              ["#roadmap", "Expansão"],
-              ["#contacto", "Contacto"],
+              ["/servicos", "Serviços"],
+              ["/investimento", "Investimento"],
+              ["/expansao", "Expansão"],
+              ["/portefolio", "Portefólio"],
             ].map(([href, label]) => (
               <a
                 key={label}
@@ -54,7 +56,7 @@ export default function Header() {
             ))}
           </nav>
           <Button
-            className="hidden sm:inline-flex bg-gradient-to-br from-[#C5A572] to-[#B79248] text-[#0B0E11] hover:opacity-95 shadow-[0_8px_24px_rgba(197,165,114,0.25)] text-nowrap"
+            className="hidden sm:inline-flex bg-linear-to-br from-[#C5A572] to-[#B79248] text-[#0B0E11] hover:opacity-95 shadow-[0_8px_24px_rgba(197,165,114,0.25)] text-nowrap"
             onClick={() => router.push("/#contacto")}
           >
             Pedir Avaliação
