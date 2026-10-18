@@ -28,17 +28,24 @@ export default function Contact() {
   const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ?? "";
   const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ?? "";
 
-  const valid = () => {
-    if (!name.trim()) return false;
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return false;
-    if (!/^\+?\d[\d\s()-]{6,}$/.test(telefone)) return false;
-    if (!subject.trim()) return false;
-    if (message.trim().length === 0) return false;
-    return true;
+  const validationError = () => {
+    if (!name.trim()) return "Indique o seu nome.";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return "Email inválido.";
+    if (!/^\+?\d[\d\s()-]{6,}$/.test(telefone)) return "Telefone inválido.";
+    if (!subject.trim()) return "Indique o assunto.";
+    if (message.trim().length === 0) return "Escreva a sua mensagem.";
+    return null;
   };
 
   const handleSend = async () => {
-    if (!valid()) {
+    const error = validationError();
+    if (error) {
+      toast.error(error);
+      return;
+    }
+
+    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+      console.error("EmailJS env vars missing (NEXT_PUBLIC_EMAILJS_*)");
       toast.error("Erro ao enviar. Tente novamente.");
       return;
     }
@@ -65,6 +72,8 @@ export default function Contact() {
       setSubject("");
       setMessage("");
     } catch (e) {
+      const err = e as { status?: number; text?: string };
+      console.error(`EmailJS send failed: ${err.status} ${err.text ?? String(e)}`);
       toast.error("Erro ao enviar. Tente novamente.");
     } finally {
       setLoading(false);
